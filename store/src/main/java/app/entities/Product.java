@@ -1,13 +1,17 @@
-public class Product {
-    private double price;
-    private String name;
-    private double rate;
+package app.entities;
 
-    public double getPrice() {
+import java.math.BigDecimal;
+
+public class Product {
+    private BigDecimal price;
+    private String name;
+    private Double rate;
+
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -27,5 +31,9 @@ public class Product {
         this.rate = rate;
     }
 
-
+    public Product(BigDecimal price, String name, Double rate) {
+        this.price = price;
+        this.name = name;
+        this.rate = rate;
+    }
 }
