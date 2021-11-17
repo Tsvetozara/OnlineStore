@@ -1,4 +1,4 @@
-package app.masterProduct;
+package com.coherentsolutions.trainings.java.auto.domain.Product;
 
 public class ProductVariation {
     private int quantity;
