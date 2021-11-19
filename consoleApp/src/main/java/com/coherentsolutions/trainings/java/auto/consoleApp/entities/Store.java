@@ -1,4 +1,4 @@
-package app.entities;
+package com.coherentsolutions.trainings.java.auto.consoleApp.entities;
 
 import java.util.LinkedList;
 import java.util.List;

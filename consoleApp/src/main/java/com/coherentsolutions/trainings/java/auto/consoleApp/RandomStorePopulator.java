@@ -1,4 +1,4 @@
-package app;
+package com.coherentsolutions.trainings.java.auto.consoleApp;
 
 import com.github.javafaker.Faker;
 

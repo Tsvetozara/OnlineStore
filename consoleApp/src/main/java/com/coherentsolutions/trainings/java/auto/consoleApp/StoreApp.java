@@ -1,12 +1,11 @@
-package app;
+package com.coherentsolutions.trainings.java.auto.consoleApp;
 
-import app.entities.Category;
-import app.entities.Product;
+import com.coherentsolutions.trainings.java.auto.consoleApp.entities.Category;
+import com.coherentsolutions.trainings.java.auto.consoleApp.entities.Product;
 import org.reflections.Reflections;
+import org.reflections.scanners.Scanners;
 
 import java.util.Set;
-
-import static org.reflections.scanners.Scanners.SubTypes;
 
 public class StoreApp {
 
@@ -21,7 +20,7 @@ public class StoreApp {
         Reflections reflections = new Reflections("app.categories");
 
         Set<Class<?>> subTypes =
-                reflections.get(SubTypes.of(Category.class).asClass());
+                reflections.get(Scanners.SubTypes.of(Category.class).asClass());
 
         Category milk = new Category("Milk");
         Category phone = new Category("Phone");
