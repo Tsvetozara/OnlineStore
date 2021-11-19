@@ -1,4 +1,4 @@
-package com.coherentsolutions.trainings.java.auto.consoleApp.entities;
+package app.com.coherentsolutions.trainings.java.auto.store;
 
 import java.math.BigDecimal;
 

@@ -1,11 +1,13 @@
 package com.coherentsolutions.trainings.java.auto.domain.Product;
 
+import java.math.BigDecimal;
+
 public class MasterProduct {
     private String name;
     private Double rate;
     private String description;
 
-    public void setName(String name) {
+      public void setName(String name) {
         this.name = name;
     }
 

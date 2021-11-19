@@ -1,7 +1,7 @@
 package com.coherentsolutions.trainings.java.auto.consoleApp;
 
-import com.coherentsolutions.trainings.java.auto.consoleApp.entities.Category;
-import com.coherentsolutions.trainings.java.auto.consoleApp.entities.Product;
+import app.com.coherentsolutions.trainings.java.auto.store.Category;
+import app.com.coherentsolutions.trainings.java.auto.store.Product;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 
