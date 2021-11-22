@@ -1,7 +1,5 @@
 package com.coherentsolutions.trainings.java.auto.domain.Product;
 
-import java.math.BigDecimal;
-
 public class ProductVariation extends MasterProduct {
     private int quantity;
     private int memory;
@@ -14,7 +12,9 @@ public class ProductVariation extends MasterProduct {
     private String batteryType;
 
     public ProductVariation(int quantity, int memory, String processor, double weight, String color,
-                            double displaySize, double displayResolution, double price, String batteryType) {
+                            double displaySize, double displayResolution, double price,
+                            String batteryType, String name, Double rate, String description) {
+        super(name, rate, description);
         this.quantity = quantity;
         this.memory = memory;
         this.processor = processor;
