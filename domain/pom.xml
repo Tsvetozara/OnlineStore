@@ -11,7 +11,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>domain</artifactId>
-    <groupId>com.coherentsolutions.trainings.java.auto.store</groupId>
+    <dependencies>
+        <dependency>
+            <groupId>com.coherentsolutions.trainings.java.auto.store</groupId>
+            <artifactId>store</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.coherentsolutions.trainings.java.auto.store</groupId>
+            <artifactId>store</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <groupId>com.coherentsolutions.trainings.java.auto.domain</groupId>
     <version>1.0</version>
 
     <properties>
