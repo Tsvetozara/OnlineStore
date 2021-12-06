@@ -1,6 +1,6 @@
 package com.coherentsolutions.trainings.java.auto.domain.Product;
 
-public class ProductVariation extends MasterProduct {
+public class ProductVariation {
     private int quantity;
     private int memory;
     private String processor;
@@ -14,7 +14,6 @@ public class ProductVariation extends MasterProduct {
     public ProductVariation(int quantity, int memory, String processor, double weight, String color,
                             double displaySize, double displayResolution, double price,
                             String batteryType, String name, Double rate, String description) {
-        super(name, rate, description);
         this.quantity = quantity;
         this.memory = memory;
         this.processor = processor;
