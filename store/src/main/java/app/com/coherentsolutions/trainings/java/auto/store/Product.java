@@ -36,4 +36,13 @@ public class Product {
         this.name = name;
         this.rate = rate;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "price=" + price +
+                ", name='" + name + '\'' +
+                ", rate=" + rate +
+                '}';
+    }
 }
