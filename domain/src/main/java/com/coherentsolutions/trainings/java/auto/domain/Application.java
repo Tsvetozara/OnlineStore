@@ -1,21 +1,21 @@
 package com.coherentsolutions.trainings.java.auto.domain;
 
-import app.com.coherentsolutions.trainings.java.auto.store.Product;
+import app.com.coherentsolutions.trainings.java.auto.store.ProductPackage.MasterProduct;
 
 import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
 
-        List<Product> products = createProducts();
+        List<MasterProduct> products = createProducts();
 
-          if ("sort".equals(products)) {
-            sortProducts(products);
-              products.sort(new ProductComparator());
-              System.out.println(products);
+        if ("sort".equals(products)) {
+            sortMasterProducts(products);
+            products.sort(new NameComparator());
+            System.out.println(products);
 
         } else if ("top".equals(products)) {
-            topProducts(products);
+            topMasterProducts(products);
             System.out.println(topProducts());
 
         } else if ("print".equals(products)) {
@@ -25,20 +25,27 @@ public class Application {
             System.exit(0);
         }
 
-        }
+    }
+
+    private static void topMasterProducts(List<MasterProduct> products) {
+    }
+
+    private static void sortMasterProducts(List<MasterProduct> products) {
+    }
 
     private static boolean topProducts() {
         return false;
     }
 
-    private static void topProducts(List<Product> products) {
-    }
-
-    private static List<Product> createProducts() {
-
+    private static List<MasterProduct> createProducts() {
         return null;
     }
 
-    private static void sortProducts(List<Product> products) {
-   }
+    public static class Category {
+        private String name;
+
+        Category[] categories;
+
+        MasterProduct[] products;
+    }
 }

@@ -1,4 +1,4 @@
-package com.coherentsolutions.trainings.java.auto.domain.Product;
+package app.com.coherentsolutions.trainings.java.auto.store.ProductPackage;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -48,4 +48,5 @@ public class MasterProduct {
     public void addVariation(ProductVariation variation) {
         variations.add(variation);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.coherentsolutions.trainings.java.auto.domain;
+package com.coherentsolutions.trainings.java.auto.consoleApp;
 
 import java.io.IOException;
 import java.io.InputStream;
