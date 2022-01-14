@@ -34,8 +34,4 @@ public class ConfigReader {
             throw new RuntimeException("Failed to read config file");
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(new ConfigReader().readOrder());
-    }
 }
