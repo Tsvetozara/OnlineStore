@@ -1,7 +1,6 @@
 package com.coherentsolutions.trainings.java.auto.consoleApp;
 
-import app.com.coherentsolutions.trainings.java.auto.store.Category;
-import app.com.coherentsolutions.trainings.java.auto.store.Product;
+import com.coherentsolutions.trainings.java.auto.store.Category;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 
@@ -43,12 +42,5 @@ public class StoreApp {
         if (numProducts > 20) {
             numProducts = 20;
         }
-
-        Product[] products = new Product[(int) numProducts];
-        for (int index = 0; index < numProducts; index++) {
-
-
-        }
-
     }
 }

@@ -1,6 +1,6 @@
 package com.coherentsolutions.trainings.java.auto.consoleApp;
 
-import app.com.coherentsolutions.trainings.java.auto.store.ProductPackage.MasterProduct;
+import com.coherentsolutions.trainings.java.auto.store.ProductPackage.MasterProduct;
 
 import java.util.List;
 import java.util.Scanner;
@@ -37,10 +37,7 @@ public class Application {
     }
 
     private static void sortProducts(List<MasterProduct> products) {
-
-        List<String> fields = new ConfigReader().readOrder();
-
-         }
+    }
 
     private static List<MasterProduct> createProducts() {
         return null;

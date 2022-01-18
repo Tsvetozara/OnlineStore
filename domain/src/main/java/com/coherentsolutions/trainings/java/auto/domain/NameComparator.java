@@ -1,6 +1,6 @@
 package com.coherentsolutions.trainings.java.auto.domain;
 
-import app.com.coherentsolutions.trainings.java.auto.store.ProductPackage.MasterProduct;
+import com.coherentsolutions.trainings.java.auto.store.ProductPackage.MasterProduct;
 
 import java.util.Comparator;
 

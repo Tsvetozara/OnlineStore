@@ -1,4 +1,4 @@
-package com.coherentsolutions.trainings.java.auto.consoleApp;
+package com.coherentsolutions.trainings.java.auto.domain;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +16,7 @@ public class ConfigReader {
 
     public List<String> readOrder() {
         List<String> result = new LinkedList<>();
-        try (InputStream is = ConfigReader.class.getResourceAsStream("/config.xml")) {
+        try (InputStream is = ConfigReader.class.getResourceAsStream("config.xml")) {
             XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
             XMLEventReader reader = xmlInputFactory.createXMLEventReader(is);
 
