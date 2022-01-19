@@ -1,11 +1,14 @@
 package com.coherentsolutions.trainings.java.auto.consoleApp;
 
+import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
+import com.coherentsolutions.trainings.java.auto.domain.RatingComparator;
 import com.coherentsolutions.trainings.java.auto.store.ProductPackage.MasterProduct;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class Application {
+
     public static void main(String[] args) {
 
         List<MasterProduct> products = createProducts();
@@ -34,9 +37,13 @@ public class Application {
     }
 
     private static void topProducts(List<MasterProduct> products) {
+        products.sort(new RatingComparator());
+        System.out.println(products.subList(0,5));
     }
 
     private static void sortProducts(List<MasterProduct> products) {
+        products.sort(new NameComparator());
+        System.out.println(products);
     }
 
     private static List<MasterProduct> createProducts() {

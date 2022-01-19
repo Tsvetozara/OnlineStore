@@ -26,7 +26,6 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
-
         <dependency>
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
@@ -35,6 +34,12 @@
         <dependency>
             <groupId>com.coherentsolutions.trainings.java.auto.store</groupId>
             <artifactId>store</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.coherentsolutions.trainings.java.auto.domain</groupId>
+            <artifactId>domain</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>

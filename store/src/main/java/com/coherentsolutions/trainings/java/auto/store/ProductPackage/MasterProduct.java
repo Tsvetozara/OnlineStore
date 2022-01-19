@@ -49,4 +49,4 @@ public class MasterProduct {
         variations.add(variation);
     }
 
-}
+   }
