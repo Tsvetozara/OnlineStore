@@ -1,4 +1,4 @@
-package com.coherentsolutions.trainings.java.auto.store.ProductPackage;
+package com.coherentsolutions.trainings.java.auto.store.productpackage;
 
 public class ProductVariation {
     private int quantity;

@@ -1,9 +1,11 @@
 package com.coherentsolutions.trainings.java.auto.store;
 
+import java.util.List;
+
 public class Category {
     private String name;
 
-    Category[] categories;
+    public List<Category> categories;
 
     public String getName() {
         return name;
@@ -13,11 +15,11 @@ public class Category {
         this.name = name;
     }
 
-    public Category[] getCategories() {
+    public List<Category> getCategories() {
         return categories;
     }
 
-    public void setCategories(Category[] categories) {
+    public void setCategories(List<Category> categories) {
         this.categories = categories;
     }
 

@@ -2,7 +2,7 @@ package com.coherentsolutions.trainings.java.auto.consoleApp;
 
 import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
 import com.coherentsolutions.trainings.java.auto.domain.RatingComparator;
-import com.coherentsolutions.trainings.java.auto.store.ProductPackage.MasterProduct;
+import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
 
 import java.util.List;
 import java.util.Scanner;
