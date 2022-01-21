@@ -2,6 +2,8 @@ package com.coherentsolutions.trainings.java.auto.consoleApp;
 
 import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
 import com.coherentsolutions.trainings.java.auto.domain.PriceComparator;
+import com.coherentsolutions.trainings.java.auto.store.Category;
+import com.coherentsolutions.trainings.java.auto.store.Store;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
 
@@ -11,6 +13,17 @@ import java.util.Scanner;
 public class Application {
 
     public static void main(String[] args) {
+
+        System.out.println("Welcome to category store");
+        Store store = new Store();
+        Category phones = new Category("Phones");
+        MasterProduct iphone = new MasterProduct("iphone");
+        ProductVariation whiteColour = new ProductVariation("whiteColour", 1000.0);
+        ProductVariation silverColour = new ProductVariation("silverColour", 1200.0);
+        ProductVariation blueColour = new ProductVariation("blueColour", 1100.0);
+        ProductVariation blackColour = new ProductVariation("blackColour", 1400.0);
+        ProductVariation pinkColour = new ProductVariation("pinkColour", 1350.0);
+        ProductVariation greenColour = new ProductVariation("pinkColour", 900.0);
 
         List<MasterProduct> products = createProducts();
         List<ProductVariation> variations = createVariations();

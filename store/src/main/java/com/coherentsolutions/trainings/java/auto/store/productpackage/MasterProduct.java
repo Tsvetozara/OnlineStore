@@ -17,6 +17,9 @@ public class MasterProduct {
         this.description = description;
     }
 
+    public MasterProduct(String iphone) {
+    }
+
     public String getName() {
         return name;
     }
