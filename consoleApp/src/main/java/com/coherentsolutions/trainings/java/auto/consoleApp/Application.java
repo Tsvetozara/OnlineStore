@@ -38,14 +38,13 @@ public class Application {
         }
     }
 
-    private static List<ProductVariation> createVariations()  {
+    private static List<ProductVariation> createVariations() {
         return null;
-    }{
     }
 
     private static void topProducts(List<ProductVariation> products) {
         products.sort(new PriceComparator());
-        System.out.println(products.subList(0,5));
+        System.out.println(products.subList(0, 5));
     }
 
     private static void sortProducts(List<MasterProduct> products) {
