@@ -17,7 +17,8 @@ public class MasterProduct {
         this.description = description;
     }
 
-    public MasterProduct(String iphone) {
+    public MasterProduct(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -52,4 +53,4 @@ public class MasterProduct {
         variations.add(variation);
     }
 
-   }
+}

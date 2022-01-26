@@ -7,6 +7,7 @@ import com.coherentsolutions.trainings.java.auto.store.Store;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,8 +26,12 @@ public class Application {
         ProductVariation pinkColour = new ProductVariation("pinkColour", 1350.0);
         ProductVariation greenColour = new ProductVariation("pinkColour", 900.0);
 
-        List<MasterProduct> products = createProducts();
-        List<ProductVariation> variations = createVariations();
+        List<ProductVariation> variations = Arrays.asList(whiteColour, silverColour, blueColour,
+                blackColour, pinkColour, greenColour);
+        iphone.setVariations(variations);
+        List<MasterProduct> products = Arrays.asList(iphone);
+        phones.setProducts(products);
+        store.addCategory(phones);
 
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
@@ -60,13 +65,13 @@ public class Application {
         System.out.println(products.subList(0, 5));
     }
 
+    private static List<MasterProduct> createProducts() {
+        return null;
+    }
+
     private static void sortProducts(List<MasterProduct> products) {
         products.sort(new NameComparator());
         System.out.println(products);
-    }
-
-    private static List<MasterProduct> createProducts() {
-        return null;
     }
 }
 

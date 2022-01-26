@@ -25,7 +25,9 @@ public class ProductVariation {
         this.batteryType = batteryType;
     }
 
-    public ProductVariation(String whiteColour, double price) {
+    public ProductVariation(String color, double price) {
+        this.color = color;
+        this.price = price;
     }
 
     public int getQuantity() {
