@@ -19,15 +19,8 @@ public class Application {
         Store store = new Store();
         Category phones = new Category("Phones");
         MasterProduct iphone = new MasterProduct("iphone");
-        ProductVariation whiteColour = new ProductVariation("whiteColour", 1000.0);
-        ProductVariation silverColour = new ProductVariation("silverColour", 1200.0);
-        ProductVariation blueColour = new ProductVariation("blueColour", 1100.0);
-        ProductVariation blackColour = new ProductVariation("blackColour", 1400.0);
-        ProductVariation pinkColour = new ProductVariation("pinkColour", 1350.0);
-        ProductVariation greenColour = new ProductVariation("pinkColour", 900.0);
 
-        List<ProductVariation> variations = Arrays.asList(whiteColour, silverColour, blueColour,
-                blackColour, pinkColour, greenColour);
+        List<ProductVariation> variations = createVariations();
         iphone.setVariations(variations);
         List<MasterProduct> products = Arrays.asList(iphone);
         phones.setProducts(products);
@@ -57,7 +50,17 @@ public class Application {
     }
 
     private static List<ProductVariation> createVariations() {
-        return null;
+
+        ProductVariation whiteColour = new ProductVariation("whiteColour", 1000.0);
+        ProductVariation silverColour = new ProductVariation("silverColour", 1200.0);
+        ProductVariation blueColour = new ProductVariation("blueColour", 1100.0);
+        ProductVariation blackColour = new ProductVariation("blackColour", 1400.0);
+        ProductVariation pinkColour = new ProductVariation("pinkColour", 1350.0);
+        ProductVariation greenColour = new ProductVariation("pinkColour", 900.0);
+
+        List<ProductVariation> variations = Arrays.asList(whiteColour, silverColour, blueColour,
+                blackColour, pinkColour, greenColour);
+       return  variations;
     }
 
     private static void topProducts(List<ProductVariation> products) {
@@ -65,11 +68,7 @@ public class Application {
         System.out.println(products.subList(0, 5));
     }
 
-    private static List<MasterProduct> createProducts() {
-        return null;
-    }
-
-    private static void sortProducts(List<MasterProduct> products) {
+     private static void sortProducts(List<MasterProduct> products) {
         products.sort(new NameComparator());
         System.out.println(products);
     }
