@@ -26,6 +26,10 @@ public class Application {
         phones.setProducts(products);
         store.addCategory(phones);
 
+        executeCommand(products, variations);
+    }
+
+    public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
             String command = scanner.next();
@@ -45,7 +49,6 @@ public class Application {
                     System.exit(0);
                 }
             }
-
         }
     }
 
@@ -60,7 +63,7 @@ public class Application {
 
         List<ProductVariation> variations = Arrays.asList(whiteColour, silverColour, blueColour,
                 blackColour, pinkColour, greenColour);
-       return  variations;
+        return variations;
     }
 
     private static void topProducts(List<ProductVariation> products) {
@@ -68,7 +71,7 @@ public class Application {
         System.out.println(products.subList(0, 5));
     }
 
-     private static void sortProducts(List<MasterProduct> products) {
+    private static void sortProducts(List<MasterProduct> products) {
         products.sort(new NameComparator());
         System.out.println(products);
     }
