@@ -1,0 +1,8 @@
+<config>
+    <top>5</top>
+    <sort>
+        <name>asc</name>
+        <price>asc</price>
+        <rate>desc</rate>
+    </sort>
+</config>
