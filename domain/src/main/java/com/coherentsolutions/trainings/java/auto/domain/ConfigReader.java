@@ -9,7 +9,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 public class ConfigReader {
-    
+
     public void readOrder() throws JAXBException {
         List<String> result = new LinkedList<>();
 
