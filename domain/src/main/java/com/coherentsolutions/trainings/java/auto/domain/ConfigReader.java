@@ -1,37 +1,21 @@
 package com.coherentsolutions.trainings.java.auto.domain;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.xml.stream.XMLEventReader;
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.events.StartElement;
-import javax.xml.stream.events.XMLEvent;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 
 public class ConfigReader {
-
-
-    public List<String> readOrder() {
+    
+    public void readOrder() throws JAXBException {
         List<String> result = new LinkedList<>();
-        try (InputStream is = ConfigReader.class.getResourceAsStream("config.xml")) {
-            XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
-            XMLEventReader reader = xmlInputFactory.createXMLEventReader(is);
 
-            while (reader.hasNext()) {
-                XMLEvent nextEvent = reader.nextEvent();
-                if (nextEvent.isStartElement()) {
-                    StartElement startElement = nextEvent.asStartElement();
-                    if (!startElement.getName().getLocalPart().equals("sort")) {
-                        result.add(startElement.getName().getLocalPart());
-                    }
-                }
-            }
-            return result;
-        } catch (IOException | XMLStreamException e) {
-            throw new RuntimeException("Failed to read config file");
-        }
+        JAXBContext jaxbContext = JAXBContext.newInstance(ConfigReader.class);
+        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+
+        ConfigReader results = (ConfigReader) jaxbUnmarshaller.unmarshal(new File("config.xml"));
     }
 }
