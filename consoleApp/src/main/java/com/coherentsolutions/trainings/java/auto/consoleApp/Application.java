@@ -27,6 +27,13 @@ public class Application {
         store.addCategory(phones);
 
         executeCommand(products, variations);
+
+        String fileName = "config.xml";
+
+        jaxbXmlFileToObject(fileName);
+    }
+
+    private static void jaxbXmlFileToObject(String fileName) {
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {
