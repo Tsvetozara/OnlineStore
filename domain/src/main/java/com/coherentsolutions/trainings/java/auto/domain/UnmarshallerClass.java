@@ -1,27 +1,26 @@
 package com.coherentsolutions.trainings.java.auto.domain;
 
-import java.io.File;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 public class UnmarshallerClass {
 
-    private static void jaxbXmlFileToObject(String fileName) {
-
-        File xmlFile = new File("config.xml");
+    public void jaxbXmlFileToObject(String fileName) {
 
         JAXBContext jaxbContext;
 
         try
         {
-            jaxbContext = JAXBContext.newInstance(UnmarshallerClass.class);
+            jaxbContext = JAXBContext.newInstance(Config.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-            UnmarshallerClass results = (UnmarshallerClass) jaxbUnmarshaller.unmarshal(xmlFile);
+            Config results = (Config) jaxbUnmarshaller.unmarshal(UnmarshallerClass.class.getResourceAsStream("/" + fileName));
 
-            System.out.println(results);
+            System.out.println(results.getTop());
+            System.out.println(results.getSort().getName());
+            System.out.println(results.getSort().getPrice());
+            System.out.println(results.getSort().getRate());
         }
         catch (JAXBException e)
         {

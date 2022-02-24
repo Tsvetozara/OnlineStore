@@ -2,6 +2,7 @@ package com.coherentsolutions.trainings.java.auto.consoleApp;
 
 import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
 import com.coherentsolutions.trainings.java.auto.domain.PriceComparator;
+import com.coherentsolutions.trainings.java.auto.domain.UnmarshallerClass;
 import com.coherentsolutions.trainings.java.auto.store.Category;
 import com.coherentsolutions.trainings.java.auto.store.Store;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
@@ -29,11 +30,7 @@ public class Application {
         executeCommand(products, variations);
 
         String fileName = "config.xml";
-
-        jaxbXmlFileToObject(fileName);
-    }
-
-    private static void jaxbXmlFileToObject(String fileName) {
+        new UnmarshallerClass().jaxbXmlFileToObject(fileName);
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {
