@@ -10,20 +10,13 @@ public class UnmarshallerClass {
 
         JAXBContext jaxbContext;
 
-        try
-        {
+        try {
             jaxbContext = JAXBContext.newInstance(Config.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
             Config results = (Config) jaxbUnmarshaller.unmarshal(UnmarshallerClass.class.getResourceAsStream("/" + fileName));
 
-            System.out.println(results.getTop());
-            System.out.println(results.getSort().getName());
-            System.out.println(results.getSort().getPrice());
-            System.out.println(results.getSort().getRate());
-        }
-        catch (JAXBException e)
-        {
+        } catch (JAXBException e) {
             e.printStackTrace();
         }
     }

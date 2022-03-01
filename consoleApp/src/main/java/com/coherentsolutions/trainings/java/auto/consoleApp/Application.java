@@ -2,7 +2,6 @@ package com.coherentsolutions.trainings.java.auto.consoleApp;
 
 import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
 import com.coherentsolutions.trainings.java.auto.domain.PriceComparator;
-import com.coherentsolutions.trainings.java.auto.domain.UnmarshallerClass;
 import com.coherentsolutions.trainings.java.auto.store.Category;
 import com.coherentsolutions.trainings.java.auto.store.Store;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
@@ -28,9 +27,6 @@ public class Application {
         store.addCategory(phones);
 
         executeCommand(products, variations);
-
-        String fileName = "config.xml";
-        new UnmarshallerClass().jaxbXmlFileToObject(fileName);
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {

@@ -6,8 +6,20 @@ import java.util.Comparator;
 
 public class NameComparator implements Comparator<MasterProduct> {
 
+    private Config config;
+
+    public NameComparator(Config config) {
+        this.config = config;
+    }
+
+    public NameComparator() {
+
+    }
+
     @Override
     public int compare(MasterProduct o1, MasterProduct o2) {
+
+
         int nameComparison = o1.getName().compareTo(o2.getName());
         if (nameComparison != 0) {
             return nameComparison;
