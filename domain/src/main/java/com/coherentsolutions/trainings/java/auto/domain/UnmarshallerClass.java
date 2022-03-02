@@ -6,18 +6,19 @@ import javax.xml.bind.Unmarshaller;
 
 public class UnmarshallerClass {
 
-    public void jaxbXmlFileToObject(String fileName) {
+    public Config jaxbXmlFileToObject(String fileName) {
 
         JAXBContext jaxbContext;
 
         try {
             jaxbContext = JAXBContext.newInstance(Config.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-
             Config results = (Config) jaxbUnmarshaller.unmarshal(UnmarshallerClass.class.getResourceAsStream("/" + fileName));
+            return  results;
 
         } catch (JAXBException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }
