@@ -6,16 +6,6 @@ import java.util.Comparator;
 
 public class NameComparator implements Comparator<MasterProduct> {
 
-    private Config config;
-
-    public NameComparator(Config config) {
-        this.config = config;
-    }
-
-    public NameComparator() {
-
-    }
-
     @Override
     public int compare(MasterProduct o1, MasterProduct o2) {
 
