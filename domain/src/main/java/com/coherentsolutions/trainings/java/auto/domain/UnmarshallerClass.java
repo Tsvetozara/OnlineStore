@@ -6,7 +6,7 @@ import javax.xml.bind.Unmarshaller;
 
 public class UnmarshallerClass {
 
-    public Config jaxbXmlFileToObject(String fileName) {
+    public Config jaxbXmlFileToObject(String fileName) throws JAXBException {
 
         JAXBContext jaxbContext;
 
@@ -18,7 +18,7 @@ public class UnmarshallerClass {
 
         } catch (JAXBException e) {
             e.printStackTrace();
+            throw e;
         }
-        return null;
     }
 }
