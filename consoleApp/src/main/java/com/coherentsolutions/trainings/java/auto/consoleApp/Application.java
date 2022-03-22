@@ -4,7 +4,9 @@ import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
 import com.coherentsolutions.trainings.java.auto.domain.PriceComparator;
 import com.coherentsolutions.trainings.java.auto.store.Category;
 import com.coherentsolutions.trainings.java.auto.store.Store;
+import com.coherentsolutions.trainings.java.auto.store.productpackage.ColourFactory;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
+import com.coherentsolutions.trainings.java.auto.store.productpackage.Phone;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
 
 import java.util.Arrays;
@@ -18,7 +20,8 @@ public class Application {
         System.out.println("Welcome to category store");
         Store store = new Store();
         Category phones = new Category("Phones");
-        MasterProduct iphone = new MasterProduct("iphone");
+        MasterProduct iphone = new MasterProduct("iphone") {
+        };
 
         List<ProductVariation> variations = createVariations();
         iphone.setVariations(variations);
@@ -26,7 +29,11 @@ public class Application {
         phones.setProducts(products);
         store.addCategory(phones);
 
-        executeCommand(products, variations);
+       // executeCommand(products, variations);
+
+        String phone = args[0];
+        Phone colour = ColourFactory.createPhone(phone);
+        System.out.println(colour.getColour());
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {

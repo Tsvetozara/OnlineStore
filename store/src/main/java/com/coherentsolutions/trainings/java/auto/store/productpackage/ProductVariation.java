@@ -102,5 +102,5 @@ public class ProductVariation {
         return batteryType;
     }
 
-}
+   }
 
