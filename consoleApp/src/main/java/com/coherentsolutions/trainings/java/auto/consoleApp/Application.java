@@ -9,9 +9,7 @@ import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProd
 import com.coherentsolutions.trainings.java.auto.store.productpackage.Phone;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Application {
 
@@ -29,11 +27,30 @@ public class Application {
         phones.setProducts(products);
         store.addCategory(phones);
 
-       // executeCommand(products, variations);
+        executeCommand(products, variations);
 
         String phone = args[0];
         Phone colour = ColourFactory.createPhone(phone);
         System.out.println(colour.getColour());
+
+        List<String> list = new LinkedList<>();
+        list.add("RedPhone");
+        list.add("GreenPhone");
+        list.add("WhitePhone");
+
+        Phone obj = new Phone() {
+            @Override
+            public String getColour() {
+                return null;
+            }
+
+            @Override
+            public boolean getRandomElement(List<String> list) {
+                return false;
+            }
+        };
+
+        System.out.println(obj.getRandomElement(list));
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {
