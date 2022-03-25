@@ -45,12 +45,14 @@ public class Application {
             }
 
             @Override
-            public boolean getRandomElement(List<String> list) {
-                return false;
+            public int getRandomElement(List<String> list, int boundIndex) {
+                return 0;
             }
+
         };
 
-        System.out.println(obj.getRandomElement(list));
+        int boundIndex = 3;
+        System.out.println(obj.getRandomElement(list, boundIndex));
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {

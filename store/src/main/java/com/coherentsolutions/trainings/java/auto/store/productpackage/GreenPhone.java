@@ -9,7 +9,7 @@ public class GreenPhone implements Phone{
     }
 
     @Override
-    public boolean getRandomElement(List<String> list) {
-        return false;
+    public int getRandomElement(List<String> list, int boundIndex) {
+        return boundIndex;
     }
 }

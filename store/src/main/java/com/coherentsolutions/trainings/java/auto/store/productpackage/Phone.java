@@ -5,5 +5,5 @@ import java.util.List;
 public interface Phone {
     String getColour();
 
-    boolean getRandomElement(List<String> list);
+    int getRandomElement(List<String> list, int boundIndex);
 }
