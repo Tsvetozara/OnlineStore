@@ -5,11 +5,10 @@ import com.coherentsolutions.trainings.java.auto.domain.PriceComparator;
 import com.coherentsolutions.trainings.java.auto.store.Category;
 import com.coherentsolutions.trainings.java.auto.store.Store;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
+import com.coherentsolutions.trainings.java.auto.store.productpackage.Phone;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Application {
 
@@ -18,7 +17,8 @@ public class Application {
         System.out.println("Welcome to category store");
         Store store = new Store();
         Category phones = new Category("Phones");
-        MasterProduct iphone = new MasterProduct("iphone");
+        MasterProduct iphone = new MasterProduct("iphone") {
+        };
 
         List<ProductVariation> variations = createVariations();
         iphone.setVariations(variations);
@@ -27,6 +27,27 @@ public class Application {
         store.addCategory(phones);
 
         executeCommand(products, variations);
+
+        List<String> list = new LinkedList<>();
+        list.add("RedPhone");
+        list.add("GreenPhone");
+        list.add("WhitePhone");
+
+        Phone obj = new Phone() {
+            @Override
+            public String getColour() {
+                return null;
+            }
+
+            @Override
+            public int getRandomElement(List<String> list, int boundIndex) {
+                return 0;
+            }
+
+        };
+
+        int boundIndex = 3;
+        System.out.println(obj.getRandomElement(list, boundIndex));
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {
