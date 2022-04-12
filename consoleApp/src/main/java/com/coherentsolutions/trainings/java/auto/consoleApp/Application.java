@@ -4,7 +4,6 @@ import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
 import com.coherentsolutions.trainings.java.auto.domain.PriceComparator;
 import com.coherentsolutions.trainings.java.auto.store.Category;
 import com.coherentsolutions.trainings.java.auto.store.Store;
-import com.coherentsolutions.trainings.java.auto.store.productpackage.ColourFactory;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.Phone;
 import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
@@ -28,10 +27,6 @@ public class Application {
         store.addCategory(phones);
 
         executeCommand(products, variations);
-
-        String phone = args[0];
-        Phone colour = ColourFactory.createPhone(phone);
-        System.out.println(colour.getColour());
 
         List<String> list = new LinkedList<>();
         list.add("RedPhone");
