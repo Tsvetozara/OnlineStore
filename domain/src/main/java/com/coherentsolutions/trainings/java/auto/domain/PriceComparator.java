@@ -1,6 +1,6 @@
 package com.coherentsolutions.trainings.java.auto.domain;
 
-import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
+import com.coherentsolutions.trainings.java.auto.domain.productpackage.ProductVariation;
 
 import java.util.Comparator;
 

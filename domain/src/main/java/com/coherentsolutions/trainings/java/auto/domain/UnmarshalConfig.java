@@ -4,7 +4,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-public class UnmarshallerClass {
+public class UnmarshalConfig {
 
     public Config jaxbXmlFileToObject(String fileName) throws JAXBException {
 
@@ -13,7 +13,7 @@ public class UnmarshallerClass {
         try {
             jaxbContext = JAXBContext.newInstance(Config.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            Config results = (Config) jaxbUnmarshaller.unmarshal(UnmarshallerClass.class.getResourceAsStream("/" + fileName));
+            Config results = (Config) jaxbUnmarshaller.unmarshal(UnmarshalConfig.class.getResourceAsStream("/" + fileName));
             return  results;
 
         } catch (JAXBException e) {

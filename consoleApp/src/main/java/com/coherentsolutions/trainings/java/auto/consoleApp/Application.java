@@ -1,18 +1,16 @@
 package com.coherentsolutions.trainings.java.auto.consoleApp;
 
-import com.coherentsolutions.trainings.java.auto.domain.NameComparator;
-import com.coherentsolutions.trainings.java.auto.domain.PriceComparator;
-import com.coherentsolutions.trainings.java.auto.store.Category;
-import com.coherentsolutions.trainings.java.auto.store.Store;
-import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
-import com.coherentsolutions.trainings.java.auto.store.productpackage.Phone;
-import com.coherentsolutions.trainings.java.auto.store.productpackage.ProductVariation;
+import com.coherentsolutions.trainings.java.auto.domain.*;
+import com.coherentsolutions.trainings.java.auto.domain.productpackage.MasterProduct;
+import com.coherentsolutions.trainings.java.auto.domain.productpackage.Phone;
+import com.coherentsolutions.trainings.java.auto.domain.productpackage.ProductVariation;
 
+import javax.xml.bind.JAXBException;
 import java.util.*;
 
 public class Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JAXBException {
 
         System.out.println("Welcome to category store");
         Store store = new Store();
@@ -28,26 +26,15 @@ public class Application {
 
         executeCommand(products, variations);
 
+        String fileName = "config.xml";
+        new UnmarshalConfig().jaxbXmlFileToObject(fileName);
+
         List<String> list = new LinkedList<>();
         list.add("RedPhone");
         list.add("GreenPhone");
         list.add("WhitePhone");
 
-        Phone obj = new Phone() {
-            @Override
-            public String getColour() {
-                return null;
-            }
-
-            @Override
-            public int getRandomElement(List<String> list, int boundIndex) {
-                return 0;
-            }
-
-        };
-
-        int boundIndex = 3;
-        System.out.println(obj.getRandomElement(list, boundIndex));
+        System.out.println(list);
     }
 
     public static void executeCommand(List<MasterProduct> products, List<ProductVariation> variations) {

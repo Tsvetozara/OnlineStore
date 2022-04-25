@@ -1,4 +1,4 @@
-package com.coherentsolutions.trainings.java.auto.store.productpackage;
+package com.coherentsolutions.trainings.java.auto.domain.productpackage;
 
 import java.util.LinkedList;
 import java.util.List;

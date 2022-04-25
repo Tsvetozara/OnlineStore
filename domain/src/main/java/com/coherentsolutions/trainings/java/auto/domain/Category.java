@@ -1,6 +1,6 @@
-package com.coherentsolutions.trainings.java.auto.store;
+package com.coherentsolutions.trainings.java.auto.domain;
 
-import com.coherentsolutions.trainings.java.auto.store.productpackage.MasterProduct;
+import com.coherentsolutions.trainings.java.auto.domain.productpackage.MasterProduct;
 
 import java.util.List;
 
